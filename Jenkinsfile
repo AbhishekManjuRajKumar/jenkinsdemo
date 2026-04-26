@@ -43,16 +43,16 @@ pipeline {
         success {
 			emailext (
 			    mail to: 'abhishekmanjurajkumar@gmail.com',
-				    subject: "✅ Build Success",
-				    body: "Your app deployed successfully!"
+				subject: "✅ Build Success",
+				body: "Your app deployed successfully!"
 			)
 		}
 
         failure {
 			emailext (
 				mail to: 'abhishekmanjurajkumar@gmail.com',
-				    subject: "❌ Build Failed",
-				    body: "Check Jenkins logs."
+				subject: "❌ Build Failed",
+				body: "Check Jenkins logs."
 			)
 		}
     }
