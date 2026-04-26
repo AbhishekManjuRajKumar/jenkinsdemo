@@ -39,17 +39,17 @@ pipeline {
         }
     }
 
-post {
-        success {
-            mail to: 'abhishekmanjurajkumar@gmail.com ',
-                 subject: "✅ Build Success",
-                 body: "Your app deployed successfully!"
-        }
-
-        failure {
-            mail to: 'abhishekmanjurajkumar@gmail.com ',
-                 subject: "❌ Build Failed",
-                 body: "Check Jenkins logs."
-        }
+    post {
+            success {
+                mail to: 'abhishekmanjurajkumar@gmail.com ',
+                     subject: "✅ Build Success",
+                     body: "Your app deployed successfully!"
+            }
+    
+            failure {
+                mail to: 'abhishekmanjurajkumar@gmail.com ',
+                     subject: "❌ Build Failed",
+                     body: "Check Jenkins logs."
+            }
     }
 }
